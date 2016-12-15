@@ -56,7 +56,7 @@
           "metadata": {
               "name": "${APPLICATION_NAME}",
               "labels": {
-                  "application": "${APPLICATION_NAME}"
+                  "app": "${APPLICATION_NAME}"
               }
           }
       },
@@ -165,7 +165,6 @@
                 "replicas": 1,
                 "test": false,
                 "selector": {
-                    "app": "${APPLICATION_NAME}",
                     "deploymentconfig": "${APPLICATION_NAME}"
                 },
                 "template": {
