@@ -85,8 +85,6 @@ function find_env() {
 
 location=$(find_env "LOCATION")
 echo 'location: '$location
-location=portail3
-echo 'location: '$location
 mkdir -p /$JWS_HOME/conf/$location/conf
 mkdir $JWS_HOME/conf/$location/data
 mkdir $JWS_HOME/conf/$location/log
