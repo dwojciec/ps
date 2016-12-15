@@ -1,0 +1,20 @@
+#!/bin/sh
+
+echo " **  Invoking Custom Assemble Script"
+
+# Finds appropriate environment variable
+function find_env() {                                                           
+  var=`printenv "$1"`                                                           
+  # If environment variable exists                                              
+  if [ -n "$var" ]; then                                                        
+    echo $var                                                                   
+  else                                                                          
+    echo $2                                                                     
+  fi                                                                            
+}  
+
+mkdir -p /opt/portal3/conf
+mkdir /opt/portal3/data
+mkdir /opt/portal3/log
+
+/usr/local/s2i/assemble
