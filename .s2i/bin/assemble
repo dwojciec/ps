@@ -67,7 +67,7 @@ copy_artifacts "deployments"
 
 if [ -d $LOCAL_SOURCE_DIR/configuration ]; then
   echo "Copying config files from project..."
-  cp -v $LOCAL_SOURCE_DIR/configuration/* $JWS_HOME/conf/
+  cp -Rv $LOCAL_SOURCE_DIR/configuration/* $JWS_HOME/conf/
 fi
 
 echo " **  Invoking Custom Assemble Script"
